@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+/* Resetar alguns estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #f2f2f7;
+    color: #121214;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardEncomendas {
+    /* background-color: #38383d; */
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.grafico {
+    height: 300px;
+    width: 300px;
+}
+
+.tabelaRegistros {
+    position: relative;
+    max-width: 100%;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.tabelaRegistros h2 {
+    position: relative;
+}
+
+.scrollTabela {
+    max-height: 300px;
+    overflow: auto;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.scrollTabela table {
+    text-align: center;
+    border-collapse: collapse; 
+}
+
+.scrollTabela tr {
+    border-bottom: 1px solid #d2d2d4;
+}
+
+.scrollTabela tr th,
+.scrollTabela tr td {
+    padding: 2px 15px;
+}
+
+.paginacao {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnPaginacao {
+    border: none;
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .scrollTabela {
+        min-height: 500px;
+        overflow: auto;
+        margin-top: 15px;
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .scrollTabela {
+        min-height: 300px;
+    }
 }
